@@ -19,5 +19,16 @@ class TestsFinal: XCTestCase {
         
         XCTAssertEqual(expectedOutput, sortedArray)
     }
+    
+    func testMergeSort_withUnsortedIntegerArray_OutputSortedArray() {
+        let sur = sortingAlgorithms()
+        var unsortedArray = [2,6,9,1,5,9,3,]
+        let expectedOutput = [1,2,3,5,6,9,9]
+        
+        let sortedArray = sur.MergeSort(data: &unsortedArray)
+        
+        XCTAssertEqual(expectedOutput, sortedArray)
+        
+    }
 
 }
